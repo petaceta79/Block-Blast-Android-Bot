@@ -279,13 +279,6 @@ Con la calibración lista, el bot ya es completamente autónomo.
 
 ---
 
-## Próximos Pasos (Roadmap)
-
-- [ ] Optimizar el solver para maximizar puntuación (no solo colocar piezas), priorizando combos de líneas.
-- [ ] Verificación periódica automática del tablero real contra el estado interno, para detectar desincronizaciones sin intervención manual.
-- [ ] Soporte multi-tema robusto (colores/fondos distintos) sin necesidad de recalibrar.
-- [ ] Panel de estadísticas por partida (puntuación, líneas totales, turnos jugados).
-
 ## Aviso Legal
 
 Este proyecto se ha desarrollado con **fines educativos y de investigación personal** (visión por computador, automatización y algoritmos de backtracking). No está afiliado ni respaldado por los desarrolladores del juego original.
