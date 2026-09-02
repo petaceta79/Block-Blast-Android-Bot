@@ -158,7 +158,9 @@ Para lograr una tasa de error del 0% en los arrastres físicos, el script automa
   Las coordenadas de las celdas en el tablero señalan a la esquina superior izquierda, pero las piezas tienen volumen. Antes de mover nada, el script lee las dimensiones de la ficha (`filas_pieza`, `cols_pieza`) e incrementa el destino visual sumando la mitad del tamaño de las celdas implicadas para hallar el `centro_x_objetivo` y `centro_y_objetivo` reales[cite: 8].
 * **Aplicación del Modelo Paramétrico:** 
   Una vez definido el centro visual al que queremos que caiga la pieza, el script consulta `calibracion_mov.json` para cargar el perfil de físicas específico de la ranura de origen (`indice_pieza`)[cite: 8]. A continuación, inyecta la coordenada visual en la ecuación de la recta calculada previamente para obtener la coordenada táctil ciega[cite: 8]:
+  
   $$x\_destino\_dedo = (centro\_x\_objetivo \cdot m_x) + b_x$$
+  
   *(Aplicando la misma fórmula para el eje Y)[cite: 8]*
 * **Límites de Seguridad (Clipping):** 
   Para evitar que los cálculos expulsen el toque fuera de la pantalla (lo que provocaría un error fatal en Android), el resultado se recorta matemáticamente (`max` / `min`) contra los límites de resolución del dispositivo guardados en `calibracion.json`[cite: 8].
