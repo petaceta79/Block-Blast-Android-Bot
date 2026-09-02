@@ -81,9 +81,9 @@ El script guía al usuario para que arrastre manualmente una pieza a la casilla 
 **Paso 3: La Fórmula de la Recta**
 Con estos dos puntos extremos, el sistema calcula una **interpolación lineal paramétrica** ($y = mx + b$) calculando la pendiente de corrección ($m$) y el desfase de origen ($b$) para ambos ejes[cite: 3]:
 
-$$m_x = \frac{dedo\_x_2 - dedo\_x_1}{centro\_obj\_x_2 - centro\_obj\_x_1}$$
+$$m_x = \frac{dedo\_x2 - dedo\_x1}{centro\_obj\_x2 - centro\_obj\_x1}$$
 
-$$b_x = dedo\_x_1 - (centro\_obj\_x_1 \times m_x)$$
+$$b_x = dedo\_x1 - (centro\_obj\_x1 \cdot m_x)$$
 
 *(Esta misma fórmula se aplica idéntica para el eje Y calculando $m_y$ y $b_y$[cite: 3])*
 
