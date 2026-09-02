@@ -159,7 +159,7 @@ Para lograr una tasa de error del 0% en los arrastres físicos, el script automa
 * **Aplicación del Modelo Paramétrico:** 
   Una vez definido el centro visual al que queremos que caiga la pieza, el script consulta `calibracion_mov.json` para cargar el perfil de físicas específico de la ranura de origen (`indice_pieza`)[cite: 8]. A continuación, inyecta la coordenada visual en la ecuación de la recta calculada previamente para obtener la coordenada táctil ciega[cite: 8]:
   
-  $$x\_destino\_dedo = (centro\_x\_objetivo \cdot m_x) + b_x$$
+  `x_destino_dedo = (centro_x_objetivo * mx) + bx`
   
   *(Aplicando la misma fórmula para el eje Y)[cite: 8]*
 * **Límites de Seguridad (Clipping):** 
