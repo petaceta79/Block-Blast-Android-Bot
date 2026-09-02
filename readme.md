@@ -220,3 +220,18 @@ Sus características de diseño incluyen:
   Al cargar el archivo, el módulo aplica una limpieza de datos (ignora líneas en blanco o caracteres extraños) y valida matemáticamente que la matriz resultante sea exactamente de 8x8 y contenga exclusivamente valores booleanos (`0` o `1`)[cite: 12]. Si detecta corrupción en el archivo, levanta un `ValueError` para evitar que el bot juegue con un estado inválido[cite: 12].
 
 ---
+
+## Guía de Instalación y Uso
+
+Sigue estos pasos para configurar el bot en tu entorno local y sincronizarlo con la resolución de tu dispositivo Android.
+
+### 1. Preparación del Entorno
+
+Antes de descargar el código, asegúrate de tener las herramientas base preparadas en tu sistema:
+
+* **Depuración USB:** Activa las opciones de desarrollador en tu teléfono Android y habilita la "Depuración USB". Conecta el móvil al PC mediante cable.
+* **ADB (Android Debug Bridge):** Instala ADB en tu ordenador y asegúrate de que reconoce tu dispositivo ejecutando `adb devices` en la terminal.
+* **Dependencias de Python:** El bot requiere librerías modernas de visión artificial y manipulación de matrices. Instálalas ejecutando:
+  ```bash
+  pip install numpy opencv-python moviepy
+  ```
