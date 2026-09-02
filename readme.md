@@ -279,6 +279,16 @@ Con la calibración lista, el bot ya es completamente autónomo.
 
 ---
 
+## Resultados
+
+Tras probar el bot se ha llegado a puntuaciones de **500.000 puntos**, algo muy complicado de alcanzar jugando de forma lícita. Llegado a ese punto quedan muy pocas soluciones posibles por turno, y el bot consigue encontrarlas sin ningún tipo de problema.
+
+Una vez configurado y calibrado con cuidado, el bot no comete ningún error y es totalmente autónomo. Además, se ha comprobado que el juego siempre ofrece una combinación de piezas con, como mínimo, una solución posible.
+
+Las veces que ha fallado ha sido por **desincronización del tablero**, normalmente debida a una mala calibración y, por tanto, a una mala detección de las piezas. Pero una vez todo está correctamente calibrado, no ha vuelto a fallar — las pruebas se han detenido simplemente por llevar ya mucho tiempo en marcha, no por errores del bot.
+
+---
+
 ## Aviso Legal
 
 Este proyecto se ha desarrollado con **fines educativos y de investigación personal** (visión por computador, automatización y algoritmos de backtracking). No está afiliado ni respaldado por los desarrolladores del juego original.
