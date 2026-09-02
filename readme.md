@@ -245,7 +245,7 @@ Como el bot está diseñado para ser universal, necesita aprender las proporcion
 
   ```bash
   python captura.py
-  python calibrar_tablero.py captura_juego.png
+  python calibrar_tablero.py tablero_juego.png
   ```
 
 - **Físicas de Arrastre (Offset Táctil):** A continuación, calibra la física del movimiento para las 3 ranuras respondiendo a las preguntas de la consola. Esto generará el archivo `calibracion_mov.json`:
