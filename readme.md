@@ -253,6 +253,11 @@ Como el bot está diseñado para ser universal, necesita aprender las proporcion
   ```bash
   python calibracion_move.py
   ```
+    > ## ⚠️ Aviso
+  >
+  > Para calibrar esto, deberás activar «Mostrar ubicación de las pulsaciones» o alguna opción que permita ver dónde has pulsado en las opciones de desarrollador de Android.
+  >
+  > Es muy importante que, al momento de usar el bot, lo desactives si este deja algún tipo de marca visual, ya que rompe el script de leer piezas (al funcionar por color, no identifica bien las piezas).
 
 ### 3. Ejecución y Debugging
 
