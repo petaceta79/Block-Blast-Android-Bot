@@ -253,7 +253,7 @@ Como el bot está diseñado para ser universal, necesita aprender las proporcion
   ```bash
   python calibracion_move.py
   ```
-    > ## ⚠️ Aviso
+  
   >
   > Para calibrar esto, deberás activar «Mostrar ubicación de las pulsaciones» o alguna opción que permita ver dónde has pulsado en las opciones de desarrollador de Android.
   >
