@@ -11,6 +11,32 @@
 
 ---
 
+## Índice
+
+- [Sobre el Proyecto](#sobre-el-proyecto)
+- [Características Principales (Features)](#características-principales-features)
+- [Arquitectura y Lógica del Proyecto](#arquitectura-y-lógica-del-proyecto)
+  - [`bot.py` (El Orquestador y la Memoria)](#botpy-el-orquestador-y-la-memoria)
+  - [`bot_debug.py`](#bot_debugpy)
+  - [`calibracion_move.py` (La Física del Arrastre y el Offset Táctil)](#calibracion_movepy-la-física-del-arrastre-y-el-offset-táctil)
+  - [`calibrar_tablero.py` (Mapeo Espacial y Escala)](#calibrar_tableropy-mapeo-espacial-y-escala)
+  - [`captura.py` (Extracción de Pantalla y Streaming USB)](#capturapy-extracción-de-pantalla-y-streaming-usb)
+  - [`historial.py` (Debug)](#historialpy-debug)
+  - [`leer_piezas.py` (Visión Artificial y Filtro Anti-Sombras 3D)](#leer_piezaspy-visión-artificial-y-filtro-anti-sombras-3d)
+  - [`mover_pieza.py`](#mover_piezapy)
+  - [`solver.py` (El Motor Lógico y Árbol de Backtracking)](#solverpy-el-motor-lógico-y-árbol-de-backtracking)
+  - [`solver2.py` (El Motor Lógico y Maximizador de Combos)](#solver2py-el-motor-lógico-y-maximizador-de-combos)
+  - [`swipe_derecha.py` (Diagnóstico de Conexión ADB)](#swipe_derechapy-diagnóstico-de-conexión-adb)
+  - [`tablero_io.py` (Persistencia de Estado y Human-in-the-Loop)](#tablero_iopy-persistencia-de-estado-y-human-in-the-loop)
+- [Guía de Instalación y Uso](#guía-de-instalación-y-uso)
+  - [1. Preparación del Entorno](#1-preparación-del-entorno)
+  - [2. Calibración del Dispositivo (solo la primera vez)](#2-calibración-del-dispositivo-solo-la-primera-vez)
+  - [3. Ejecución y Debugging](#3-ejecución-y-debugging)
+- [Resultados](#resultados)
+- [Aviso Legal](#aviso-legal)
+
+---
+
 ## Sobre el Proyecto
 
 Un bot autónomo y determinista desarrollado en Python capaz de jugar al popular juego **Block Blast** en dispositivos Android reales. 
