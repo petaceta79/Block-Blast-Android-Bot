@@ -229,9 +229,60 @@ Sigue estos pasos para configurar el bot en tu entorno local y sincronizarlo con
 
 Antes de descargar el código, asegúrate de tener las herramientas base preparadas en tu sistema:
 
-* **Depuración USB:** Activa las opciones de desarrollador en tu teléfono Android y habilita la "Depuración USB". Conecta el móvil al PC mediante cable.
-* **ADB (Android Debug Bridge):** Instala ADB en tu ordenador y asegúrate de que reconoce tu dispositivo ejecutando `adb devices` en la terminal.
-* **Dependencias de Python:** El bot requiere librerías modernas de visión artificial y manipulación de matrices. Instálalas ejecutando:
+- **Depuración USB:** Activa las opciones de desarrollador en tu teléfono Android y habilita la "Depuración USB". Conecta el móvil al PC mediante cable.
+- **ADB (Android Debug Bridge):** Instala ADB en tu ordenador y asegúrate de que reconoce tu dispositivo ejecutando `adb devices` en la terminal.
+- **Dependencias de Python:** El bot requiere librerías modernas de visión artificial y manipulación de matrices. Instálalas ejecutando:
+
   ```bash
   pip install numpy opencv-python moviepy
   ```
+
+### 2. Calibración del Dispositivo (solo la primera vez)
+
+Como el bot está diseñado para ser universal, necesita aprender las proporciones de tu pantalla mediante dos asistentes de calibración.
+
+- **Mapeo Visual (Geometría):** Abre una partida en tu móvil y ejecuta la herramienta de captura y el asistente visual. Sigue las instrucciones de clics en la ventana para generar `calibracion.json`:
+
+  ```bash
+  python captura.py
+  python calibrar_tablero.py captura_juego.png
+  ```
+
+- **Físicas de Arrastre (Offset Táctil):** A continuación, calibra la física del movimiento para las 3 ranuras respondiendo a las preguntas de la consola. Esto generará el archivo `calibracion_mov.json`:
+
+  ```bash
+  python calibracion_move.py
+  ```
+
+### 3. Ejecución y Debugging
+
+Con la calibración lista, el bot ya es completamente autónomo.
+
+- **Iniciar Partida:** Abre el juego en tu móvil y lanza el orquestador principal. Puedes pasarle como argumento el número de turnos que quieres que juegue (ej. 50):
+
+  ```bash
+  python bot.py 50
+  ```
+
+- **Detención y Guardado Seguro:** Para parar el bot, pulsa `Ctrl+C` una sola vez en la consola. El bot no se cortará de golpe: terminará de colocar las fichas de su mano, guardará el estado en `tablero_estado.txt` y saldrá limpiamente.
+
+- **Auditoría de Jugadas:** Si en algún momento la matriz virtual se desincroniza de la pantalla física, abre el sistema de Replay para auditar las jugadas paso a paso y detectar el error:
+
+  ```bash
+  python bot_debug.py
+  ```
+
+---
+
+## Próximos Pasos (Roadmap)
+
+- [ ] Optimizar el solver para maximizar puntuación (no solo colocar piezas), priorizando combos de líneas.
+- [ ] Verificación periódica automática del tablero real contra el estado interno, para detectar desincronizaciones sin intervención manual.
+- [ ] Soporte multi-tema robusto (colores/fondos distintos) sin necesidad de recalibrar.
+- [ ] Panel de estadísticas por partida (puntuación, líneas totales, turnos jugados).
+
+## Aviso Legal
+
+Este proyecto se ha desarrollado con **fines educativos y de investigación personal** (visión por computador, automatización y algoritmos de backtracking). No está afiliado ni respaldado por los desarrolladores del juego original.
+
+El uso de este bot para jugar de forma automatizada puede infringir los términos de servicio de la aplicación o de las plataformas de distribución (rankings, logros, etc.). El autor no se hace responsable del uso que se le dé a este código ni de las consecuencias derivadas de su uso en cuentas o dispositivos de terceros. Úsalo bajo tu propia responsabilidad.
